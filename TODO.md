@@ -1,0 +1,6 @@
+- [x] Update import in Footer.tsx to include Facebook from lucide-react
+- [x] Update Instagram icon className to text-[#E4405F]
+- [x] Update LinkedIn icon className to text-[#0077B5]
+- [x] Update WhatsApp icon className to text-[#25D366]
+- [x] Add Facebook icon link with href="#" and className text-[#1877F2]
+- [x] Update YouTube icon className to text-[#FF0000]
