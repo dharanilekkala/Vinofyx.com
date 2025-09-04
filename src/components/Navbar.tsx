@@ -1,6 +1,5 @@
-import { ChevronDown, Facebook, Instagram, Linkedin, Menu, X, Youtube } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
-import { FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const navItems = [
@@ -13,10 +12,10 @@ const navItems = [
 
 const services = [
   { name: '💻 Website Development', href: '/services#website-development' },
-  { name: '🌐 Search Engine Optimization', href: '/services#search-engine-optimization' },
+  { name: '🌐 Search Engine Optimization (SEO)', href: '/services#search-engine-optimization' },
   { name: '📱 Social Media Management', href: '/services#social-media-management' },
   { name: '🎬 Video Editing & Reels Creation', href: '/services#video-editing--reels-creation' },
-  { name: '📈 Google Ads', href: '/services#google-ads' },
+  { name: '📈 Google Ads (SEM / PPC)', href: '/services#google-ads' },
   { name: '📘 eBook & Digital Brochure Designing', href: '/services#ebook--digital-brochure-designing' },
 ];
 
@@ -97,20 +96,14 @@ const Navbar = () => {
 
             {/* Services Dropdown */}
             <div className="relative" ref={servicesRef}>
-              <Link
-                to="/services"
-                onClick={playClickSound}
-                className="px-4 py-2.5 text-sm font-medium text-foreground flex items-center space-x-1 hover:bg-accent hover:rounded-lg"
-              >
-                <span>Services</span>
-              </Link>
               <button
                 onClick={() => {
                   playClickSound();
                   setIsServicesOpen(!isServicesOpen);
                 }}
-                className="px-4 py-2.5 text-sm font-medium text-foreground flex items-center space-x-1 hover:bg-accent hover:rounded-lg ml-1"
+                className="px-4 py-2.5 text-sm font-medium text-foreground flex items-center space-x-1 hover:bg-accent hover:rounded-lg"
               >
+                <span>Services</span>
                 <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
 
@@ -118,9 +111,9 @@ const Navbar = () => {
                 <div className="absolute top-full left-0 mt-2 w-80 bg-card border border-border rounded-lg shadow-hover z-50">
                   <div className="p-4 space-y-2">
                     {services.map((service, index) => (
-                      <Link
+                      <a
                         key={index}
-                        to={service.href}
+                        href={service.href}
                         className="block p-3 rounded-lg hover:bg-accent transition-colors text-sm"
                         onMouseEnter={playHoverSound}
                         onClick={() => {
@@ -129,7 +122,7 @@ const Navbar = () => {
                         }}
                       >
                         {service.name}
-                      </Link>
+                      </a>
                     ))}
                   </div>
                 </div>
@@ -138,7 +131,7 @@ const Navbar = () => {
           </div>
 
           {/* Right Section */}
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="hidden lg:block">
             <a href="https://forms.gle/xQxeF3hhEoa2qF2t9" target="_blank" rel="noopener noreferrer">
               <button
                 className="connect-button"
@@ -148,58 +141,6 @@ const Navbar = () => {
                 Let's Connect
               </button>
             </a>
-            <div className="flex items-center space-x-2">
-              <a
-                href="https://www.instagram.com/vinofyxdigitalmedia/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#E4405F] hover:text-primary transition-colors"
-                onMouseEnter={playHoverSound}
-                onClick={playClickSound}
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/venkat-sadhu-0555a5367/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#0077B5] hover:text-primary transition-colors"
-                onMouseEnter={playHoverSound}
-                onClick={playClickSound}
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a
-                href="https://wa.me/919391934534"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#25D366] hover:text-primary transition-colors"
-                onMouseEnter={playHoverSound}
-                onClick={playClickSound}
-              >
-                <FaWhatsapp className="h-5 w-5" />
-              </a>
-              <a
-                href="https://www.youtube.com/@VinofyxDigital"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#FF0000] hover:text-primary transition-colors"
-                onMouseEnter={playHoverSound}
-                onClick={playClickSound}
-              >
-                <Youtube className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#1877F2] hover:text-primary transition-colors"
-                onMouseEnter={playHoverSound}
-                onClick={playClickSound}
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -239,9 +180,9 @@ const Navbar = () => {
               <div className="pt-2 border-t border-border/50">
                 <div className="px-4 py-2 text-base font-medium text-foreground">Services</div>
                 {services.map((service, index) => (
-                  <Link
+                  <a
                     key={index}
-                    to={service.href}
+                    href={service.href}
                     className="block px-4 py-3 rounded-lg text-base font-medium text-foreground hover:bg-accent"
                     onClick={() => {
                       playClickSound();
@@ -249,7 +190,7 @@ const Navbar = () => {
                     }}
                   >
                     {service.name}
-                  </Link>
+                  </a>
                 ))}
               </div>
             </div>
