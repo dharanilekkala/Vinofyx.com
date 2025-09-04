@@ -97,14 +97,20 @@ const Navbar = () => {
 
             {/* Services Dropdown */}
             <div className="relative" ref={servicesRef}>
+              <Link
+                to="/services"
+                onClick={playClickSound}
+                className="px-4 py-2.5 text-sm font-medium text-foreground flex items-center space-x-1 hover:bg-accent hover:rounded-lg"
+              >
+                <span>Services</span>
+              </Link>
               <button
                 onClick={() => {
                   playClickSound();
                   setIsServicesOpen(!isServicesOpen);
                 }}
-                className="px-4 py-2.5 text-sm font-medium text-foreground flex items-center space-x-1 hover:bg-accent hover:rounded-lg"
+                className="px-4 py-2.5 text-sm font-medium text-foreground flex items-center space-x-1 hover:bg-accent hover:rounded-lg ml-1"
               >
-                <span>Services</span>
                 <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
 
@@ -112,9 +118,9 @@ const Navbar = () => {
                 <div className="absolute top-full left-0 mt-2 w-80 bg-card border border-border rounded-lg shadow-hover z-50">
                   <div className="p-4 space-y-2">
                     {services.map((service, index) => (
-                      <a
+                      <Link
                         key={index}
-                        href={service.href}
+                        to={service.href}
                         className="block p-3 rounded-lg hover:bg-accent transition-colors text-sm"
                         onMouseEnter={playHoverSound}
                         onClick={() => {
@@ -123,7 +129,7 @@ const Navbar = () => {
                         }}
                       >
                         {service.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -233,9 +239,9 @@ const Navbar = () => {
               <div className="pt-2 border-t border-border/50">
                 <div className="px-4 py-2 text-base font-medium text-foreground">Services</div>
                 {services.map((service, index) => (
-                  <a
+                  <Link
                     key={index}
-                    href={service.href}
+                    to={service.href}
                     className="block px-4 py-3 rounded-lg text-base font-medium text-foreground hover:bg-accent"
                     onClick={() => {
                       playClickSound();
@@ -243,7 +249,7 @@ const Navbar = () => {
                     }}
                   >
                     {service.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
