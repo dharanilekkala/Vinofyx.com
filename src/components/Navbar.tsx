@@ -1,5 +1,6 @@
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { ChevronDown, Facebook, Instagram, Linkedin, Menu, X, Youtube } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
+import { FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const navItems = [
@@ -131,7 +132,7 @@ const Navbar = () => {
           </div>
 
           {/* Right Section */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex items-center space-x-3">
             <a href="https://forms.gle/xQxeF3hhEoa2qF2t9" target="_blank" rel="noopener noreferrer">
               <button
                 className="connect-button"
@@ -141,6 +142,58 @@ const Navbar = () => {
                 Let's Connect
               </button>
             </a>
+            <div className="flex items-center space-x-2">
+              <a
+                href="https://www.instagram.com/vinofyxdigitalmedia/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#E4405F] hover:text-primary transition-colors"
+                onMouseEnter={playHoverSound}
+                onClick={playClickSound}
+              >
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/venkat-sadhu-0555a5367/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#0077B5] hover:text-primary transition-colors"
+                onMouseEnter={playHoverSound}
+                onClick={playClickSound}
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a
+                href="https://wa.me/919391934534"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#25D366] hover:text-primary transition-colors"
+                onMouseEnter={playHoverSound}
+                onClick={playClickSound}
+              >
+                <FaWhatsapp className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.youtube.com/@VinofyxDigital"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#FF0000] hover:text-primary transition-colors"
+                onMouseEnter={playHoverSound}
+                onClick={playClickSound}
+              >
+                <Youtube className="h-5 w-5" />
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#1877F2] hover:text-primary transition-colors"
+                onMouseEnter={playHoverSound}
+                onClick={playClickSound}
+              >
+                <Facebook className="h-5 w-5" />
+              </a>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
