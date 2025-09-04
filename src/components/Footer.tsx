@@ -77,12 +77,12 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-foreground">Our Services</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#services" className="text-muted-foreground hover:text-primary transition-colors">🔍 Search Engine Optimization (SEO)</a></li>
-              <li><a href="#services" className="text-muted-foreground hover:text-primary transition-colors">📱 Social Media Management & Strategy</a></li>
-              <li><a href="#services" className="text-muted-foreground hover:text-primary transition-colors">🎯 Performance Marketing (Google Ads & Meta Ads)</a></li>
-              <li><a href="#services" className="text-muted-foreground hover:text-primary transition-colors">💻 Website Design & Development</a></li>
-              <li><a href="#services" className="text-muted-foreground hover:text-primary transition-colors">📊 Analytics & Growth Tracking</a></li>
-              <li><a href="#services" className="text-muted-foreground hover:text-primary transition-colors">🎥 Video Editing & Content Creation</a></li>
+              <li><a href="/services#search-engine-optimization" className="text-muted-foreground hover:text-primary transition-colors">🔍 Search Engine Optimization (SEO)</a></li>
+              <li><a href="/services#social-media-management" className="text-muted-foreground hover:text-primary transition-colors">📱 Social Media Management & Strategy</a></li>
+              <li><a href="/services#google-ads" className="text-muted-foreground hover:text-primary transition-colors">🎯 Performance Marketing (Google Ads & Meta Ads)</a></li>
+              <li><a href="/services#website-development" className="text-muted-foreground hover:text-primary transition-colors">💻 Website Design & Development</a></li>
+              <li><a href="/services" className="text-muted-foreground hover:text-primary transition-colors">📊 Analytics & Growth Tracking</a></li>
+              <li><a href="/services#video-editing--reels-creation" className="text-muted-foreground hover:text-primary transition-colors">🎥 Video Editing & Content Creation</a></li>
             </ul>
           </div>
 
@@ -90,12 +90,11 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="font-semibold text-foreground">Company</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#about" className="text-muted-foreground hover:text-primary transition-colors">Home</a></li>
-       
-              <li><a href="#careers" className="text-muted-foreground hover:text-primary transition-colors">Careers</a></li>
+              <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors">Home</Link></li>
+              <li><Link to="/careers" className="text-muted-foreground hover:text-primary transition-colors">Careers</Link></li>
               <li><Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</Link></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Projects</a></li>
-              <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
+              <li><Link to="/projects" className="text-muted-foreground hover:text-primary transition-colors">Projects</Link></li>
+              <li><Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
             </ul>
           </div>
 
