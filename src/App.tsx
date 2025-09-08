@@ -17,9 +17,8 @@ import Projects from "./pages/Projects";
 import RefundCancellationPolicy from "./pages/RefundCancellationPolicy";
 import Services from "./pages/Services";
 import TermsAndConditions from "./pages/TermsAndConditions";
-
+import FloatingSocials from "./components/floatingsocials";
 const queryClient = new QueryClient();
-
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -44,6 +43,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */} 
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <FloatingSocials/>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

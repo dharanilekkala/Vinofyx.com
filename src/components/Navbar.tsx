@@ -132,7 +132,7 @@ const Navbar = () => {
           </div>
 
           {/* Right Section */}
-          <div className="hidden lg:flex items-center space-x-3">
+          <div className="hidden lg:flex items-center space-x-24">
             <a href="https://forms.gle/xQxeF3hhEoa2qF2t9" target="_blank" rel="noopener noreferrer">
               <button
                 className="connect-button"
@@ -142,7 +142,7 @@ const Navbar = () => {
                 Let's Connect
               </button>
             </a>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-6">
               <a
                 href="https://www.instagram.com/vinofyxdigitalmedia/"
                 target="_blank"
@@ -151,7 +151,7 @@ const Navbar = () => {
                 onMouseEnter={playHoverSound}
                 onClick={playClickSound}
               >
-                <Instagram className="h-5 w-5" />
+                <Instagram className="h-8 w-8" />
               </a>
               <a
                 href="https://www.linkedin.com/in/venkat-sadhu-0555a5367/"
@@ -161,7 +161,7 @@ const Navbar = () => {
                 onMouseEnter={playHoverSound}
                 onClick={playClickSound}
               >
-                <Linkedin className="h-5 w-5" />
+                <Linkedin className="h-8 w-8" />
               </a>
               <a
                 href="https://wa.me/919391934534"
@@ -171,7 +171,7 @@ const Navbar = () => {
                 onMouseEnter={playHoverSound}
                 onClick={playClickSound}
               >
-                <FaWhatsapp className="h-5 w-5" />
+                <FaWhatsapp className="h-8 w-8" />
               </a>
               <a
                 href="https://www.youtube.com/@VinofyxDigital"
@@ -181,17 +181,17 @@ const Navbar = () => {
                 onMouseEnter={playHoverSound}
                 onClick={playClickSound}
               >
-                <Youtube className="h-5 w-5" />
+                <Youtube className="h-8 w-8" />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61576595434197"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#1877F2] hover:text-primary transition-colors"
                 onMouseEnter={playHoverSound}
                 onClick={playClickSound}
               >
-                <Facebook className="h-5 w-5" />
+                <Facebook className="h-8 w-8" />
               </a>
             </div>
           </div>

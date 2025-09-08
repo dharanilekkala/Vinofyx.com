@@ -2,6 +2,8 @@ import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import Navbar from '@/components/Navbar';
 import Services from '@/components/Services';
+import FeaturedProjects from '@/components/FeaturedProjects';
+
 
 import { Link } from 'react-router-dom';
 
@@ -112,11 +114,11 @@ const Index = () => {
               Discover some of our latest work and see how we've helped brands 
               transform their digital presence.
             </p>
-            <div className="elegant-card p-12">
-              <p className="text-muted-foreground">Project showcase coming soon...</p>
-            </div>
+            <FeaturedProjects />
           </div>
         </section>
+        
+
 
         <section id="careers" className="py-20 px-6 sm:px-8">
           <div className="max-w-7xl mx-auto text-center">
